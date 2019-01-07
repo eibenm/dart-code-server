@@ -19,5 +19,5 @@ doc/api/
 /generated/*
 /log/*
 
-!/generated\.gitkeep
+!/generated/.gitkeep
 !/log/.gitkeep
