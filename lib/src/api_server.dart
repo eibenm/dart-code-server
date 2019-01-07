@@ -24,11 +24,11 @@ final bool enablePackages = false;
 class DartServicesAPIServer {
   Pub pub;
   Compiler compiler;
-  AnalysisServerWrapper analysisServer;
+  // AnalysisServerWrapper analysisServer;
 
   String sdkPath;
 
-  DartServicesAPIServer(String this.sdkPath) {
+  DartServicesAPIServer(/*String this.sdkPath*/) {
     hierarchicalLoggingEnabled = true;
     log.level = Level.ALL;
   }
@@ -36,15 +36,15 @@ class DartServicesAPIServer {
   Future init() async {
     pub = enablePackages ? Pub() : Pub.mock();
     compiler = Compiler(sdkPath, pub);
-    analysisServer = AnalysisServerWrapper(sdkPath);
+    // analysisServer = AnalysisServerWrapper(sdkPath);
 
-    await analysisServer.init();
-    analysisServer.onExit.then((int code) {
-      log.severe('analysisServer exited, code: $code');
-      if (code != 0) {
-        exit(code);
-      }
-    });
+    // await analysisServer.init();
+    // analysisServer.onExit.then((int code) {
+    //   log.severe('analysisServer exited, code: $code');
+    //   if (code != 0) {
+    //     exit(code);
+    //   }
+    // });
 
     return Future.value();
   }
@@ -66,7 +66,7 @@ class DartServicesAPIServer {
   }
 
   Future shutdown() {
-    return Future.wait([analysisServer.shutdown()]);
+    // return Future.wait([analysisServer.shutdown()]);
   }
 
   // ------- TEST APIS

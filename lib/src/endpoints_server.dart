@@ -32,7 +32,7 @@ class EndpointsServer {
   shelf.Handler handler;
 
   EndpointsServer._(String sdkPath, this.port) {
-    dartServicesAPIServer = DartServicesAPIServer(sdkPath);
+    dartServicesAPIServer = DartServicesAPIServer();
     dartServicesAPIServer.init();
     apiServer = ApiServer(apiPrefix: _API_PREFIX, prettyPrint: true)
       ..addApi(dartServicesAPIServer);

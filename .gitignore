@@ -16,6 +16,8 @@ build/
 doc/api/
 
 # Keep these empty folders
+/generated/*
 /log/*
 
+!/generated\.gitkeep
 !/log/.gitkeep

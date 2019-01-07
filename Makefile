@@ -11,4 +11,4 @@ start-server: ## Start up the server
 
 .PHONY: generate-discovery
 generate-client-api: ## Generate client dart api stub
-	@sh ./scripts/generate_client-api.sh
+	@sh ./scripts/generate_client_api.sh

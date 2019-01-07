@@ -43,6 +43,9 @@ function checkDart() {
 # Ensure correct Dart version
 checkDart
 
+# Run a pub get
+pub get
+
 # Generate discovery document
 pub run rpc:generate discovery -i lib/src/api_server.dart > generated/dartservices.json
 
