@@ -10,11 +10,19 @@ Find your desired target with `make`.  Running `make` executes self documenting 
 
 ## Running the app
 
-```bash
-make start-server
-```
-
 By default, the server starts on `localhost:8082`.  However, if a different port is required, the direct command can be run with a flag instead:
 ```bash
 dart bin/server.dart --port xxxx
+```
+
+## Generating client api stub
+
+```bash
+# macOS
+make generate-client-api
+```
+
+```powershell
+# Windows
+.\scripts\generate_client_api.ps1
 ```
